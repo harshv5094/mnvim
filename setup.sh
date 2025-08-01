@@ -38,9 +38,8 @@ fi
 setupRemotes() {
   warning_msg "Setting Up Remotes"
   git remote | grep -q "^origin$" && git remote rm origin
-  git remote | grep -q "^github$" || git remote add github git@github.com:harshv5094/dotfiles.git
-  git remote | grep -q "^gitlab$" || git remote add gitlab git@gitlab.com:harshv5094/dotfiles.git
-  git branch --set-upstream-to=github/main main
+  git remote | grep -q "^github$" || git remote add github git@github.com:harshv5094/mnvim.git
+  git remote | grep -q "^gitlab$" || git remote add gitlab git@gitlab.com:harshv5094/mnvim.git
 }
 
 # Global Variables #
@@ -54,11 +53,11 @@ fi
 if [ ! -d "${NEOVIM_DIR}" ]; then
   info_msg "Cloning my dotfiles repository..."
   git clone https://github.com/harshv5094/mnvim "${NEOVIM_DIR}"
-  setupRemotes
   cd "${NEOVIM_DIR}" || return
   success_msg "NEOVIM_DIR: $(pwd)"
+  setupRemotes
 else
   cd "${NEOVIM_DIR}" || return
-  setupRemotes
   success_msg "NEOVIM_DIR: $(pwd)"
+  setupRemotes
 fi
