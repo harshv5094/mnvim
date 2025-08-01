@@ -13,8 +13,7 @@ return {
     { "<leader>e", function() Snacks.explorer() end, desc = "File Explorer" },
     
     -- git
-    { "<leader>gB", function() Snacks.gitbrowse() end, desc = "Git Browse", mode = { "n", "v" } },
-    { "<leader>gg", function() Snacks.lazygit() end, desc = "Lazygit" },
+    { "<leader>gb", function() Snacks.gitbrowse() end, desc = "Git Browse", mode = { "n", "v" } },
 
     -- Toggle Terminal
     { "<leader>t", function() Snacks.terminal() end, desc = "Toggle Terminal" },

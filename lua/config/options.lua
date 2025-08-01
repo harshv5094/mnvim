@@ -1,8 +1,4 @@
-local g = vim.g
 local opt = vim.opt
-
-g.mapleader = " "
-g.maplocalleader = "\\"
 
 opt.encoding = "utf-8"
 opt.number = true
