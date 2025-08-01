@@ -40,8 +40,30 @@ return {
 				end,
 				desc = "Telescope -> Find Files",
 			},
+      {
+				"<leader>C",
+				function()
+					local builtin = require("telescope.builtin")
+					builtin.find_files({
+            prompt_title = "Neovim Config",
+            cwd = vim.fn.stdpath("config"),  -- this is typically ~/.config/nvim
+            hidden = false
+					})
+				end,
+				desc = "Telescope -> Find Files",
+      },
+      {
+				"<leader>/",
+				function()
+					local builtin = require("telescope.builtin")
+					builtin.live_grep({
+						additional_args = { "--hidden" },
+					})
+				end,
+				desc = "Telescope -> Live Grep",
+			},
 			{
-				";b",
+				"<leader>,",
 				function()
 					local builtin = require("telescope.builtin")
 					builtin.buffers()
