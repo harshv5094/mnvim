@@ -4,8 +4,12 @@ return {
     priority = 1000,
     lazy = false,
     opts = {
+      explorer = { enabled = true }
     },
     keys = {      
+    -- File explorer
+    { "<leader>e", function() Snacks.explorer() end, desc = "File Explorer" },
+
     -- git
     { "<leader>gb", function() Snacks.gitbrowse() end, desc = "Git Browse", mode = { "n", "v" } },
 
