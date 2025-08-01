@@ -38,7 +38,7 @@ map("n", "<localleader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]
 map("n", "<localleader>x", "<cmd>!chmod +x %<CR>", { desc = " Set Script To Executable", silent = true })
 
 -- adding lazy extras keybind
-map("n", "<leader>l", "<cmd>Lazy<CR>", desc = "lazy")
+map("n", "<leader>l", "<cmd>Lazy<CR>", { desc = "lazy" })
 
 -- lazygit
 if vim.fn.executable("lazygit") == 1 then
@@ -46,3 +46,6 @@ if vim.fn.executable("lazygit") == 1 then
 		Snacks.lazygit()
 	end, { desc = "Lazygit (cwd)" })
 end
+
+-- quit
+map("n", "<leader>qq", "<cmd>qa<cr>", { desc = "Quit All" })

@@ -1,5 +1,6 @@
 local opt = vim.opt
 
+
 opt.encoding = "utf-8"
 opt.number = true
 opt.relativenumber = true
@@ -19,6 +20,9 @@ opt.inccommand = "split"
 opt.ignorecase = true -- Case insensitive searching UNLESS /C or capital in search
 opt.clipboard = vim.env.SSH_TTY and "" or "unnamedplus" -- Sync with system clipboard
 opt.cursorline = true -- Enable highlighting of the current line
+opt.autowrite = true -- Enable auto write
+opt.grepformat = "%f:%l:%c:%m"
+opt.grepprg = "rg --vimgrep"
 opt.completeopt = "menu,menuone,noselect"
 opt.smarttab = true
 opt.breakindent = true
@@ -34,6 +38,7 @@ opt.splitright = true -- Put new windows right of current
 opt.splitkeep = "cursor"
 opt.mouse = "a"
 opt.conceallevel = 3
+opt.confirm = true -- Confirm to save changes before exiting modified buffer
 
 -- Undercurl
 vim.cmd([[let &t_Cs = "\e[4:3m"]])
