@@ -157,4 +157,3 @@ M.sync_to_github = function()
 end
 
 return M
-
