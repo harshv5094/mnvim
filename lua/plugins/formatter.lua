@@ -1,4 +1,5 @@
 return {
+	-- Auto Formatter
 	{
 		"stevearc/conform.nvim",
 		event = { "BufReadPre", "BufNewFile" },
@@ -6,6 +7,7 @@ return {
 			require("conform").setup({
 				formatters_by_ft = {
 					lua = { "stylua" }, -- You can add other filetypes as needed
+					sh = { "shfmt" },
 				},
 				format_on_save = {
 					lsp_fallback = true, -- fallback if no native LSP formatting

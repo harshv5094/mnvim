@@ -37,6 +37,7 @@ opt.splitright = true -- Put new windows right of current
 opt.splitkeep = "cursor"
 opt.mouse = "a"
 opt.conceallevel = 3
+opt.statuscolumn = [[%!v:lua.require'snacks.statuscolumn'.get()]]
 opt.confirm = true -- Confirm to save changes before exiting modified buffer
 
 -- Undercurl

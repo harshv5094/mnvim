@@ -6,6 +6,7 @@ return {
 		opts = {
 			bufdelete = { enabled = true },
 			explorer = { enabled = true },
+			statuscolumn = { enabled = true },
 		},
 		keys = {
 			-- File explorer
