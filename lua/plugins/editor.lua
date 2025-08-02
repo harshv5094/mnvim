@@ -10,7 +10,7 @@ return {
         build = "make",
       },
       "nvim-telescope/telescope-file-browser.nvim",
-      "nvim-tree/nvim-web-devicons",
+      "echasnovski/mini.icons",
     },
     keys = {
       {
@@ -50,7 +50,7 @@ return {
             hidden = false,
           })
         end,
-        desc = "Telescope -> Find Files",
+        desc = "Telescope -> Neovim Config Files",
       },
       {
         "<leader>/",

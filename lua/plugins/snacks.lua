@@ -29,7 +29,7 @@ return {
 
 			-- Toggle Terminal
 			{
-				"<leader>t",
+				"<leader>ct",
 				function()
 					Snacks.terminal()
 				end,
